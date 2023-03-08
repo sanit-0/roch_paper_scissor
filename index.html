@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rps_game</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+ <!--font-h1-->    <link href="https://fonts.googleapis.com/css2?family=Labrada&display=swap" rel="stylesheet">
+
+
+  <!--font-ansbox--> <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Genos&family=Jost&family=Kalam&family=Montserrat:wght@400;700&family=Open+Sans&family=Poppins&family=Raleway:wght@400;800&family=Shantell+Sans&display=swap" rel="stylesheet">
+
+    <style>
+
+        .main{
+            background-color: rgb(28,55,86);
+            padding: 30px 0;
+            height: 100vh;
+        }
+
+        .userbox{
+            height:200px;
+            width:400px;
+            border:4px solid black;
+            margin-top: 20px;
+            background-color: rgb(41,40,40);
+        }
+        .userbox h2{
+                font-size: 20px; 
+
+        }
+        .userbox .ybox{
+             background-color:black;
+            color: white;
+           
+        }
+
+        #ptag1{                                /*ansbox*/
+            font-family: 'Genos', sans-serif;                  
+            height: 40px;
+            width: 250px;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+/*            border: 1px solid black;*/
+
+
+        }
+
+        #ptag2{                              /*computere*/
+            height: 100px;
+            width: 100px;
+
+/*          border: 1px solid black;*/
+        }
+
+        #ptag{                              /*usesr*/
+            height: 100px;
+            width: 100px;
+
+/*          border: 1px solid black;*/
+        }
+        
+
+        h1{
+            font-family: 'Labrada', serif;
+            font-size: 60px;
+            padding-bottom: 30px;
+
+        }
+
+        .choose h4{
+                animation-name:scale-up-center;
+                animation-direction: alternate;
+                animation-duration: 0.9s;
+                animation-iteration-count: infinite;
+        }
+
+
+        @keyframes scale-up-center {
+          0% {
+            -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+          }
+          100% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+          }
+}
+
+
+      
+
+        .img1{
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+            background-color: red;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0,0.5);
+        }
+        .img1:hover {
+           transform:scale(1.1);
+           box-shadow: 6px 6px 5px rgba(0, 0, 0,0.6 );
+        }
+
+
+        @media  screen and (max-width: 650px) {
+            h1{
+                font-size: 30px;
+
+            }
+            .userbox{
+                width:160px;
+            }
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid main">
+
+    <h1 class="text-center text-white" id="title"> </h1>
+
+    <div class="mainbox d-flex justify-content-center">        
+
+        <div class="userbox   me-3 text-center  ">    <!--usesr-->
+            <div class="ybox py-1">
+            <h2 >You</h2> 
+                
+            </div>
+
+            <div class="d-flex  justify-content-center"> 
+              <p id="ptag2"  class="m-2 "> </p>
+                
+            </div>
+            
+        </div>
+
+        <div class="userbox   text-center ">
+            <div class="ybox  py-1">
+                <h2 >Computer</h2>                  <!--computer-->
+                
+            </div> 
+
+            <div  class="d-flex  justify-content-center">
+            <p id="ptag" class="m-2 "> </p>
+                
+            </div>
+
+        </div>
+    
+    </div>
+    
+   <div class="d-flex  justify-content-center mt-5">
+        <p id="ptag1" class="text-center">  </p>      <!--ansbox-->
+       
+   </div>
+
+
+    <div class="d-flex flex-column align-items-center">
+        <div class="choose">
+            <h4 class="text-white mb-3">choose one !</h4>
+        </div>
+
+        <div class="d-flex">
+
+            <div class="img1 d-flex  justify-content-center align-items-center">
+                 <img src="u1.png" width="70px" height="70px" onclick="fun1('rock')">
+            </div>
+           
+
+            <div class="img1 d-flex  justify-content-center align-items-center mx-3">
+
+                <img src="u2.png" width="50px" height="50px" onclick="fun1('paper')">
+            </div>
+
+
+            <div class="img1 d-flex  justify-content-center align-items-center">
+
+                <img src="u3.png" width="60px" height="60px" onclick="fun1('scissor')">
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</div>
+    
+
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="rps_game.js"></script>
+    
+</body>
+</html>
